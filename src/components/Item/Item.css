@@ -6,13 +6,20 @@
             width: 50vh;
             height: 50vh;
             border-radius: 30px;
-            padding: 2rem;
+            padding: 0.5rem;
             margin: 3rem;
             background-color: darkgray;
+            justify-content: center;
+            
+
 
         }
 
         .ItemImg{
             width: 300px;
+            filter: blur(0.5px);
+            transition: all .5s ease-in-out;
 
         }
+        .ItemImg:hover {
+            filter: blur(3px)}

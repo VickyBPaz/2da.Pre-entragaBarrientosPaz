@@ -1,0 +1,23 @@
+.imgLogo {
+    width: 80px;
+    justify-self: start;
+    margin-left: 20px;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: darkgrey;
+}
+
+.Categories{
+    text-decoration: none;
+    align-items: center;
+    padding: 50px;
+    
+
+}
+.isActive{
+
+color: azure;
+}

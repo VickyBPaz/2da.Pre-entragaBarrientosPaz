@@ -1,15 +1,22 @@
+import './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget"
+import { NavLink, Link } from 'react-router-dom'
+import logo from './imgLogo/logo.png'
+import Cart from '../CartWidget/Img/Cart.svg'
+
 
 const Navbar = () => {
     return (
-        <nav>
-            <h3>Dr. House</h3>
-            <div>
-                <button type="button" class="btn btn-primary">Aire Acondicionado</button>
-                <button type="button" class="btn btn-secondary">Plomeria</button>
-                <button type="button" class="btn btn-dark">Reparaciones</button>
-            </div>
-            <CartWidget />
+            <nav className="navBar">
+        <Link to='/'>  
+          <img className="imgLogo" src={logo} alt="logo" />
+        </Link>
+        <div className='Categories'>
+          <NavLink to= {`/category/Services Mantenimiento`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Mantenimiento Integral</NavLink>
+          <NavLink to={`/category/Services Cerrajeria`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Cerrajeria y Mobiliario</NavLink>
+          <NavLink to= {`/category/Services Electricidad`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Electricidad</NavLink>
+          </div>  
+          <CartWidget />
         </nav>
     )
 }   

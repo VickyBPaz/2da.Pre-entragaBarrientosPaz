@@ -1,7 +1,7 @@
 import './Item.css'
 import { NavLink, Link } from 'react-router-dom'
 
-const Item = ({ id, name, img, price, stock  }) => {
+const Item = ({ id, name, img, price, stock,}) => {
     return (
         <article className="CardItem">
             <header className="Header">

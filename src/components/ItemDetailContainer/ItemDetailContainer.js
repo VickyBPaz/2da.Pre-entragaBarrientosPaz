@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { getProductById } from '../../asincMock'
 import { useParams } from 'react-router-dom'
-import { getDoc, doc } from 'firebase/firestore'
+import { getDoc, doc} from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 
 
@@ -21,8 +21,8 @@ const ItemDetailContainer = () => {
         getDoc(docRef)
             .then(response => {
                 const data = response.data()
-                const productsAdapted = { id: response.id, ...data }
-                setProduct(productsAdapted)
+                const productAdapted = { id: response.id, ...data }
+                setProduct(productAdapted)
             })
             .catch(error => {
                 console.log(error)

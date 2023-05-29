@@ -8,7 +8,7 @@ import { db } from '../../services/firebase/firebaseConfig'
 
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
+    const [products, setProducts] = useState(null)
     const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
             .then(response => {
                 const data = response.data()
                 const productAdapted = { id: response.id, ...data }
-                setProduct(productAdapted)
+                setProducts(productAdapted)
             })
             .catch(error => {
                 console.log(error)
